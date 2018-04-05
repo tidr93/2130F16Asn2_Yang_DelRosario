@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="2130F16Asn2_Yang_DelRosario">
+  <ClassDiagramComponents>
+    <Class name="NewFXMain" package="" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="masterList" type="List&lt;Thomas_John_TravelReservations&gt;" visibility="package" isStatic="true"/>
+        <Field name="dateFormat" type="String" visibility="package" isStatic="true"/>
+        <Field name="currency" type="DecimalFormat" visibility="package" isStatic="true"/>
+        <Field name="format" type="SimpleDateFormat" visibility="package" isStatic="true"/>
+        <Field name="tempResults" type="List&lt;Thomas_John_TravelReservations&gt;" visibility="package" isStatic="true"/>
+        <Field name="tempResultStrings" type="List&lt;String&gt;" visibility="package" isStatic="true"/>
+        <Field name="mainMenuPane" type="GridPane" visibility="protected"/>
+        <Field name="menuScene" type="Scene" visibility="protected"/>
+        <Field name="mainAdd" type="Button" visibility="protected"/>
+        <Field name="mainSearch" type="Button" visibility="protected"/>
+        <Field name="mainExit" type="Button" visibility="protected"/>
+        <Field name="menuBack" type="Button" visibility="protected"/>
+        <Field name="addPane" type="GridPane" visibility="protected"/>
+        <Field name="addScene" type="Scene" visibility="protected"/>
+        <Field name="lblAdd" type="Label" visibility="protected"/>
+        <Field name="lblFirstName" type="Label" visibility="protected"/>
+        <Field name="lblLastName" type="Label" visibility="protected"/>
+        <Field name="lblAge" type="Label" visibility="protected"/>
+        <Field name="lblFlightNum" type="Label" visibility="protected"/>
+        <Field name="lblSource" type="Label" visibility="protected"/>
+        <Field name="lblDestination" type="Label" visibility="protected"/>
+        <Field name="lblDate" type="Label" visibility="protected"/>
+        <Field name="lblFare" type="Label" visibility="protected"/>
+        <Field name="txtFirstName" type="TextField" visibility="protected"/>
+        <Field name="txtLastName" type="TextField" visibility="protected"/>
+        <Field name="txtAge" type="TextField" visibility="protected"/>
+        <Field name="txtFlightNumber" type="TextField" visibility="protected"/>
+        <Field name="txtSource" type="TextField" visibility="protected"/>
+        <Field name="txtDestination" type="TextField" visibility="protected"/>
+        <Field name="txtTravelDate" type="TextField" visibility="protected"/>
+        <Field name="txtFare" type="TextField" visibility="protected"/>
+        <Field name="addSubmit" type="Button" visibility="protected"/>
+        <Field name="searchPane" type="GridPane" visibility="protected"/>
+        <Field name="searchScene" type="Scene" visibility="protected"/>
+        <Field name="searchLabel" type="Label" visibility="protected"/>
+        <Field name="searchParams" type="ComboBox" visibility="protected"/>
+        <Field name="searchSearchField" type="TextField" visibility="protected"/>
+        <Field name="searchSearchBtn" type="Button" visibility="protected"/>
+        <Field name="searchDisplayAll" type="Button" visibility="protected"/>
+        <Field name="searchResults" type="ListView&lt;String&gt;" visibility="protected"/>
+        <Field name="searchView" type="Button" visibility="protected"/>
+        <Field name="searchDelete" type="Button" visibility="protected"/>
+        <Field name="searchResult" type="Thomas_Alert" visibility="package"/>
+        <Field name="editPane" type="GridPane" visibility="protected"/>
+        <Field name="editParams" type="ComboBox" visibility="protected"/>
+        <Field name="editField" type="TextField" visibility="protected"/>
+        <Field name="editBtn" type="Button" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="validateStr" returnType="boolean" visibility="public">
+          <Argument type="String" name="val"/>
+        </Method>
+        <Method name="validateInt" returnType="boolean" visibility="public">
+          <Argument type="String" name="val"/>
+        </Method>
+        <Method name="validateDouble" returnType="boolean" visibility="public">
+          <Argument type="String" name="val"/>
+        </Method>
+        <Method name="validateDate" returnType="boolean" visibility="public">
+          <Argument type="String" name="val"/>
+        </Method>
+        <Method name="addInitialize" returnType="void" visibility="public"/>
+        <Method name="searchInitialize" returnType="void" visibility="public"/>
+        <Method name="populateList" returnType="void" visibility="public"/>
+        <Method name="searchHelperStart" returnType="void" visibility="public"/>
+        <Method name="searchHelperMatchFound" returnType="void" visibility="public">
+          <Argument type="int" name="i"/>
+        </Method>
+        <Method name="searchHelperEnd" returnType="void" visibility="public">
+          <Argument type="String" name="searchParam"/>
+          <Argument type="String" name="searchTerm"/>
+        </Method>
+        <Method name="addSuccess" returnType="void" visibility="public">
+          <Argument type="String" name="msg"/>
+        </Method>
+        <Method name="Error" returnType="void" visibility="public">
+          <Argument type="String" name="msg"/>
+        </Method>
+        <Method name="searchResultAlert" returnType="void" visibility="public">
+          <Argument type="Thomas_John_TravelReservations" name="obj"/>
+        </Method>
+        <Method name="editInitialize" returnType="void" visibility="public"/>
+        <Method name="editNotification" returnType="void" visibility="public">
+          <Argument type="String" name="editParam"/>
+          <Argument type="String" name="editTerm"/>
+        </Method>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="Stage" name="primaryStage"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Thomas_Alert" package="" visibility="public" xPosition="436.0" yPosition="20.0">
+      <Fields>
+        <Field name="placeholder" type="Thomas_John_TravelReservations" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="AlertType" name="alertType"/>
+          <Argument type="Thomas_John_TravelReservations" name="obj"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Thomas_John_Flight" package="" visibility="public" xPosition="916.0" yPosition="20.0">
+      <Fields>
+        <Field name="currency" type="DecimalFormat" visibility="package"/>
+        <Field name="number" type="int" visibility="private"/>
+        <Field name="source" type="String" visibility="private"/>
+        <Field name="fare" type="double" visibility="private"/>
+        <Field name="price" type="double" visibility="private"/>
+        <Field name="TAX" type="double" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="_number"/>
+          <Argument type="String" name="_source"/>
+          <Argument type="String" name="_destination"/>
+          <Argument type="double" name="_fare"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="setNumber" returnType="void" visibility="public">
+          <Argument type="int" name="_number"/>
+        </Method>
+        <Method name="setSource" returnType="void" visibility="public">
+          <Argument type="String" name="_source"/>
+        </Method>
+        <Method name="setDestination" returnType="void" visibility="public">
+          <Argument type="String" name="_destination"/>
+        </Method>
+        <Method name="setFare" returnType="void" visibility="public">
+          <Argument type="double" name="_fare"/>
+        </Method>
+        <Method name="getNumber" returnType="int" visibility="public"/>
+        <Method name="getSource" returnType="String" visibility="public"/>
+        <Method name="getDestination" returnType="String" visibility="public"/>
+        <Method name="getFare" returnType="double" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="toShortString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Thomas_John_Passenger" package="" visibility="public" xPosition="793.0" yPosition="835.0">
+      <Fields>
+        <Field name="firstName" type="String" visibility="private"/>
+        <Field name="lastName" type="String" visibility="private"/>
+        <Field name="age" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="_firstName"/>
+          <Argument type="String" name="_lastName"/>
+          <Argument type="int" name="_age"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="setFirstName" returnType="void" visibility="public">
+          <Argument type="String" name="_firstName"/>
+        </Method>
+        <Method name="setLastName" returnType="void" visibility="public">
+          <Argument type="String" name="_lastName"/>
+        </Method>
+        <Method name="setAge" returnType="void" visibility="public">
+          <Argument type="int" name="_age"/>
+        </Method>
+        <Method name="getFirstName" returnType="String" visibility="public"/>
+        <Method name="getLastName" returnType="String" visibility="public"/>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="getAge" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="toShortString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Thomas_John_TravelReservations" package="" visibility="public" xPosition="553.0" yPosition="462.0">
+      <Fields>
+        <Field name="date" type="Date" visibility="private"/>
+        <Field name="flight" type="Thomas_John_Flight" visibility="private"/>
+        <Field name="passenger" type="Thomas_John_Passenger" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Date" name="_date"/>
+          <Argument type="int" name="_number"/>
+          <Argument type="String" name="_source"/>
+          <Argument type="String" name="_destination"/>
+          <Argument type="double" name="_fare"/>
+          <Argument type="String" name="_firstName"/>
+          <Argument type="String" name="_lastName"/>
+          <Argument type="int" name="_age"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="setDate" returnType="void" visibility="public">
+          <Argument type="Date" name="_date"/>
+        </Method>
+        <Method name="getDate" returnType="Date" visibility="public"/>
+        <Method name="getFlight" returnType="Thomas_John_Flight" visibility="public"/>
+        <Method name="getPassenger" returnType="Thomas_John_Passenger" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public">
+          <Argument type="SimpleDateFormat" name="format"/>
+        </Method>
+        <Method name="toShortString" returnType="String" visibility="public">
+          <Argument type="SimpleDateFormat" name="format"/>
+        </Method>
+        <Method name="test" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="searchResult" source="NewFXMain" target="Thomas_Alert" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="flight" source="Thomas_John_TravelReservations" target="Thomas_John_Flight" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Thomas_John_TravelReservations" target="Thomas_John_Flight" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="masterList" source="NewFXMain" target="Thomas_John_TravelReservations" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Thomas_John_TravelReservations&gt;"/>
+    <UseRelation source="NewFXMain" target="Thomas_John_TravelReservations" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="placeholder" source="Thomas_Alert" target="Thomas_John_TravelReservations" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="passenger" source="Thomas_John_TravelReservations" target="Thomas_John_Passenger" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="tempResults" source="NewFXMain" target="Thomas_John_TravelReservations" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Thomas_John_TravelReservations&gt;"/>
+    <UseRelation source="Thomas_John_TravelReservations" target="Thomas_John_Passenger" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
